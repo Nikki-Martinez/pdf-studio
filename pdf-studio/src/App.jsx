@@ -5,6 +5,7 @@ import { MergePdf } from "./features/MergePdf";
 import { ImageToPdf } from "./features/ImageToPdf";
 import { SplitPdf } from "./features/SplitPdf";
 import { PdfToImg } from "./features/PdfToImg";
+import { OrganizePdf } from "./features/OrganizePdf";
 
 export default function App() {
   return (
@@ -80,7 +81,21 @@ export default function App() {
               </div>
             }
           />
-          
+          {/* Módulo 5: Organizar páginas de PDF */}
+          <Route
+            path="/organize"
+            element={
+              <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+                <Link
+                  to="/"
+                  className="mb-6 text-sm font-semibold text-red-600 hover:underline inline-flex items-center gap-1"
+                >
+                  ← Volver al catálogo
+                </Link>
+                <OrganizePdf />
+              </div>
+            }
+          />
         </Routes>
       </main>
     </div>
