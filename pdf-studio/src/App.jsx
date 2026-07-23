@@ -1,8 +1,9 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { ToolCatalog } from './components/ToolCatalog';
-import { MergePdf } from './features/MergePdf';
-import { ImageToPdf } from './features/ImageToPdf';
+import { Routes, Route, Link } from "react-router-dom";
+import { Navbar } from "./components/Navbar";
+import { ToolCatalog } from "./components/ToolCatalog";
+import { MergePdf } from "./features/MergePdf";
+import { ImageToPdf } from "./features/ImageToPdf";
+import { SplitPdf } from "./features/SplitPdf";
 
 export default function App() {
   return (
@@ -42,6 +43,23 @@ export default function App() {
                   ← Volver al catálogo
                 </Link>
                 <ImageToPdf />
+              </div>
+            }
+          />
+
+          {/* Módulo 3: Dividir/Extraer páginas de PDF */}
+
+          <Route
+            path="/split"
+            element={
+              <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+                <Link
+                  to="/"
+                  className="mb-6 text-sm font-semibold text-red-600 hover:underline inline-flex items-center gap-1"
+                >
+                  ← Volver al catálogo
+                </Link>
+                <SplitPdf />
               </div>
             }
           />
