@@ -4,6 +4,7 @@ import { ToolCatalog } from "./components/ToolCatalog";
 import { MergePdf } from "./features/MergePdf";
 import { ImageToPdf } from "./features/ImageToPdf";
 import { SplitPdf } from "./features/SplitPdf";
+import { PdfToImg } from "./features/PdfToImg";
 
 export default function App() {
   return (
@@ -63,6 +64,23 @@ export default function App() {
               </div>
             }
           />
+
+          {/* Módulo 4: PDF a Img */}
+          <Route
+            path="/pdf-to-img"
+            element={
+              <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm">
+                <Link
+                  to="/"
+                  className="mb-6 text-sm font-semibold text-red-600 hover:underline inline-flex items-center gap-1"
+                >
+                  ← Volver al catálogo
+                </Link>
+                <PdfToImg />
+              </div>
+            }
+          />
+          
         </Routes>
       </main>
     </div>
